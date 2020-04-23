@@ -116,12 +116,12 @@ const pickQuestion = () => {
     togglePanel('question');
 
     const rand = Math.random();
-    let questionType = 'flag';
-    // if (rand <= .1) {
-    //     questionType = 'country';
-    // } else if (rand <= .4) {
-    //     questionType = 'flag';
-    // }
+    let questionType = 'capital';
+    if (rand <= .1) {
+        questionType = 'country';
+    } else if (rand <= .4) {
+        questionType = 'flag';
+    }
     // const questionType = Math.random() > 0.5 ? 'country' : 'capital'; 
     curQuestionIdx = getRandomInt(0, countries.length - 1);
     questionIndexEl.textContent = `${questionNumber} / ${questionTotal}`;
